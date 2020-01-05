@@ -1,14 +1,14 @@
-import React, { FC } from "react";
-import { Header, Icon, Item } from "semantic-ui-react";
-import { Character } from "../../characterData";
+import React, { FC } from 'react'
+import { Header, Icon, Item } from 'semantic-ui-react'
+import { Character } from '../../characterData'
 
 interface CharacterListProps {
-  school: string;
-  characters: Character[];
+  school: string
+  characters: Character[]
 }
 
 const CharacterList: FC<CharacterListProps> = ({
-  school = "校名不明",
+  school = '校名不明',
   characters
 }) => (
   <>
@@ -21,7 +21,7 @@ const CharacterList: FC<CharacterListProps> = ({
             <Item.Header>{c.name}</Item.Header>
             <Item.Meta>{c.age}歳</Item.Meta>
             <Item.Meta>
-              {c.height ? c.height : "???"}
+              {c.height ? c.height : '???'}
               cm
             </Item.Meta>
           </Item.Content>
@@ -29,6 +29,6 @@ const CharacterList: FC<CharacterListProps> = ({
       ))}
     </Item.Group>
   </>
-);
+)
 
-export default CharacterList;
+export default CharacterList
